@@ -31,10 +31,10 @@ This repository documents my configuration, screenshots, and decisions for each 
 - Screenshot: OpenLDAP screens and OU structure  
 
 **What I built:**  
-[Fill in - 2 sentences max]
+I deployed the core IAM architecture and confirmed midPoint could successfully read HR data and connect to OpenLDAP. This gave me a clean, working identity flow that sets the stage for joiner, mover, and leaver automation.
 
 **Resume bullet:**  
-[Your bullet here]
+Set up and tested the IAM lab stack, ensuring accurate identity flow from HR into LDAP before provisioning workflows.
 
 ---
 
