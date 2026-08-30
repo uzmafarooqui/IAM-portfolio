@@ -1,4 +1,4 @@
-#IAM Implementation Portfolio
+#IAM Implementation Portfolio#
 
 **Cohort:** SimplifyIAM Live Cohort 1  **Name:** Uzma Farooqui  **LinkedIn:** https://www.linkedin.com/in/uzmafarooqui  **GitHub:** https://github.com/uzmafarooqui/IAM-portfolio  **Completed:** May 2026  **Status:** In progress  
 
