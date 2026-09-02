@@ -8,11 +8,11 @@ Correlation ensures each HR record links to the correct identity instead of crea
 
 These steps ensure identities are consistently created, updated, and governed across systems.
 
-### Screenshots
-**Users page:** Shows the six identities successfully imported from the HR CSV into midPoint.  
-**Audit log:** Shows today’s reconciliation events confirming the HR data was read, correlated, and linked to midPoint users.
+### Screenshots 
 ![Users Page](Users%20Page.png)
+**Users page:** Shows the six identities successfully imported from the HR CSV into midPoint. 
 ![Audit Log](Audit%20log.png)
+**Audit log:** Shows today’s reconciliation events confirming the HR data was read, correlated, and linked to midPoint users.
 
 
 
