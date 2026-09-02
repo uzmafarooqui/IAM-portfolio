@@ -11,6 +11,8 @@ These steps ensure identities are consistently created, updated, and governed ac
 ### Screenshots
 **Users page:** Shows the six identities successfully imported from the HR CSV into midPoint.  
 **Audit log:** Shows today’s reconciliation events confirming the HR data was read, correlated, and linked to midPoint users.
+![Users Page](Users%20Page.png)
+![Audit Log](Audit%20log.png)
 
 
 
