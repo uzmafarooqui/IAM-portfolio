@@ -39,4 +39,33 @@ Assigning the Employee role triggers automatic LDAP account creation.
 ![Outbound Mappings](outbound-mappings.png)  
 **Outbound mappings:** Shows how midPoint transforms identity attributes into LDAP attributes.
 
+### Joiner–Leaver Lifecycle
+
+This section demonstrates the full identity lifecycle in midPoint, from HR ingestion to LDAP provisioning and termination routing.
+
+#### Joiner
+midPoint ingests the HR record, correlates the identity, assigns the Employee role, and provisions an LDAP account under `ou=people`.  
+**Result:** 7 accounts visible in phpLDAPadmin.
+
+![LDAP Accounts – Joiner](ldap-accounts-7.png)
+
+#### Leaver
+On termination, midPoint disables the identity and routes the LDAP account to `ou=inactive` instead of deleting it.  
+This preserves the **audit trail**, **role history**, and **lifecycle events** while removing access.  
+**Result:** 6 active accounts under `ou=people`.
+
+![LDAP Accounts – Leaver](ldap-accounts-6.png)
+
+#### Why routing instead of deletion?
+Deleting an identity erases compliance‑critical data. Routing preserves:
+
+- identity history  
+- role assignments  
+- activation changes  
+- provisioning events  
+- audit logs  
+
+This mirrors real enterprise IAM behavior.
+
+Centrepiece of the portfolio: a working end‑to‑end lifecycle from **Joiner → Mover → Leaver**.
 
