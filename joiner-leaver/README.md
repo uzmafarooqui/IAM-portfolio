@@ -14,5 +14,25 @@ These steps ensure identities are consistently created, updated, and governed ac
 ![Audit Log](Audit%20log.png)
 **Audit log:** Shows today’s reconciliation events confirming the HR data was read, correlated, and linked to midPoint users.
 
+## Directory provisioning (IGA → LDAP)
+
+This section extends the pipeline beyond HR ingestion, showing how midPoint provisions accounts into OpenLDAP using outbound mappings and DN construction.
+
+### What it is
+HR‑driven provisioning from source → IGA → directory.  
+midPoint reads HR data, correlates identities, and provisions accounts into OpenLDAP under `ou=people`.
+
+### The concept (in my own words)
+Outbound mappings convert midPoint identity attributes into LDAP attributes.  
+A Groovy script constructs the DN dynamically based on activation state.  
+Assigning the Employee role triggers automatic LDAP account creation.
+
+### Screenshots
+
+![LDAP Accounts](ldap-accounts.png)  
+**phpLDAPadmin:** Shows the six LDAP accounts provisioned by midPoint under `ou=people`.
+
+![Linked Projections](midpoint-linked-projections.png)  
+**midPoint projections:** Shows each identity linked to its LDAP account, confirming successful provisioning.
 
 
