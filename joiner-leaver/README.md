@@ -39,14 +39,4 @@ Assigning the Employee role triggers automatic LDAP account creation.
 ![Outbound Mappings](outbound-mappings.png)  
 **Outbound mappings:** Shows how midPoint transforms identity attributes into LDAP attributes.
 
-**DN Groovy Script**
-```groovy
-import com.evolveum.midpoint.xml.ns._public.common.common_3.ActivationStatusType
-
-if (user?.activation?.administrativeStatus == ActivationStatusType.DISABLED) {
-    return 'uid=' + name + ',ou=inactive,dc=simplifyiam,dc=com'
-} else {
-    return 'uid=' + name + ',ou=people,dc=simplifyiam,dc=com'
-}
-
 
