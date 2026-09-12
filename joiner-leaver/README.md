@@ -22,7 +22,7 @@ This section extends the pipeline beyond HR ingestion, showing how midPoint prov
 HR‑driven provisioning from source → IGA → directory.  
 midPoint reads HR data, correlates identities, and provisions accounts into OpenLDAP under `ou=people`.
 
-### The concept (in my own words)
+### The concept
 Outbound mappings convert midPoint identity attributes into LDAP attributes.  
 A Groovy script constructs the DN dynamically based on activation state.  
 Assigning the Employee role triggers automatic LDAP account creation.
