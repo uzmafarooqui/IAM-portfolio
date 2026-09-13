@@ -24,7 +24,7 @@ After remediation:
 ## Screenshots
 
 ### Campaign Review
-![Campaign Review](./screenshots/campaign-review.png)
+![campaign-review](./screenshots/campaign-review.png)
 
 ### Assignments After Remediation
-![Assignments After Remediation](./screenshots/emma-assignments-after-remediation.png)
+![assignments-after-remediation](./screenshots/emma-assignments-after-remediation.png)
