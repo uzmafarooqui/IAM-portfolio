@@ -41,10 +41,6 @@ MidPoint automatically:
 
 This demonstrates how midPoint uses HR data to keep access aligned with job changes.
 
-## Screenshots
-### Before (Engineering)
-![Emma Engineering Roles](emma-engineering.png)
-
 ### HR Change
 ![HR Change](hr-change.png)
 
