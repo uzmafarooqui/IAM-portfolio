@@ -21,6 +21,7 @@ After remediation:
 4. Remediation: MidPoint updates assignments  
 5. Audit: Evidence captured in screenshots  
 
+
 ## Screenshots
 
 ### Campaign Review
@@ -28,3 +29,4 @@ After remediation:
 
 ### Assignments After Remediation
 ![Assignments After Remediation](./screenshots/emma-assignments-after-remediation.png)
+
