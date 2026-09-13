@@ -1,5 +1,5 @@
 
-# RBAC Roles (Simple Explanation)
+# RBAC Roles
 
 This folder shows how Emma Clarke gets her roles in midPoint. Some roles are given automatically based on her department, and one role is something she requested.
 
