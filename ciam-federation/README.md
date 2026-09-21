@@ -12,7 +12,7 @@ This folder shows my OIDC federation setup where Grafana uses Auth0 as the OpenI
 ## OIDC Flow
 Grafana redirects the user to Auth0, which authenticates the user and returns an ID token.  
 The login uses the OIDC Authorization Code Flow with PKCE for secure token exchange.
-# OAuth Delegated Authorization Demo (GitHub → SimplifyIAM OAuth Lab)
+# OAuth Delegated Authorization (GitHub → SimplifyIAM OAuth Lab)
 
 This section shows my OAuth 2.0 delegated authorization setup where the SimplifyIAM OAuth Lab app requests access to my GitHub profile.
 
