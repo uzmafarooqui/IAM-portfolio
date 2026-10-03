@@ -42,3 +42,36 @@ This proves OAuth enforces least privilege:
 
 OAuth gives access.  
 OIDC gives identity.
+
+# SAML Federation (Auth0 → Salesforce)
+
+This section demonstrates SAML 2.0 federation between Auth0 and Salesforce.
+
+## Screenshots
+
+### Salesforce Login Page with Auth0 SSO
+
+./salesforce-auth0-login-page.png
+
+### Decoded SAML Response with NameID
+
+./saml-response-nameid.png
+
+## SAML Flow
+
+- Identity Provider (IdP): Auth0
+- Service Provider (SP): Salesforce
+- Protocol: SAML 2.0
+
+Salesforce redirects users to Auth0 for authentication. Auth0 issues a signed SAML assertion that Salesforce validates before granting access.
+
+## Identity Mapping
+
+Salesforce uses the Federation ID stored on the user record to map the incoming SAML assertion.
+
+The NameID in the assertion must match the user's Federation ID for successful authentication.
+
+## Trust Mechanism
+
+Salesforce trusts Auth0 by validating the digital signature on the SAML assertion using the configured X.509 certificate.
+
