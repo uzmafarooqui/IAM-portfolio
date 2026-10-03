@@ -51,11 +51,11 @@ This section demonstrates SAML 2.0 federation between Auth0 and Salesforce.
 
 ### Salesforce Login Page with Auth0 SSO
 
-./salesforce-auth0-login-page.png
+![Salesforce Login Page with Auth0 SSO](./salesforce-auth0-login-page.png)
 
 ### Decoded SAML Response with NameID
 
-./saml-response-nameid.png
+![Decoded SAML Response with NameID](./saml-response-nameid.png)
 
 ## SAML Flow
 
