@@ -2,7 +2,7 @@
 
 ## MFA Token
 
-![MFAmr.png
+![MFAmr.png](./MFAmr.png)
 
 In this lab, I enabled MFA in Auth0 and enrolled using Google Authenticator.
 
