@@ -1,0 +1,57 @@
+# Federated Identity Chaining
+
+In this lab, I configured LinkedIn as a social identity provider in Auth0 and tested a federated login flow.
+
+## Screenshots
+
+### LinkedIn Login Through Auth0
+
+./linkedin-login-button.png
+
+### LinkedIn User Token
+
+./linkedin-jwt-token.png
+
+## What I Did
+
+- Created a LinkedIn Developer Application
+- Enabled Sign In with LinkedIn using OpenID Connect
+- Added LinkedIn as a social connection in Auth0
+- Enabled the connection for my application
+- Logged in through LinkedIn using OIDC Debugger
+- Reviewed the token claims returned after authentication
+
+## What I Learned
+
+The application does not communicate directly with LinkedIn.
+
+The trust chain looks like this:
+
+Application → Auth0 → LinkedIn
+
+The decoded token showed:
+
+```json
+"sub": "linkedin|IRtQ4LM_5M"
+```
+
+which identifies LinkedIn as the upstream identity provider.
+
+The token issuer was:
+
+```json
+"iss": "https://dev-q531a5rk2ye1qpm7.us.auth0.com/"
+```
+
+which shows that Auth0 issued the token received by the application.
+
+Even though I logged in with LinkedIn, the application only trusts Auth0 and never sees how LinkedIn authenticated me.
+
+## Key Takeaways
+
+- Federated identity works through a chain of trust.
+- Applications trust Auth0.
+- Auth0 trusts LinkedIn.
+- Email is not the primary identifier.
+- The subject identifier (`sub`) is the reliable identity key.
+- Account linking may be required when the same person uses multiple login methods.
