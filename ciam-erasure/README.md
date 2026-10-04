@@ -6,7 +6,7 @@ I created a test user, deleted the account using the Management API, and verifie
 
 ## Before Deletion
 
-user-before-delete.png
+![user-before-delete.png](./user-before-delete.png)
 
 The test user existed in Auth0 with a unique user ID.
 
@@ -22,7 +22,7 @@ indicating that the user was successfully deleted.
 
 ## Verification
 
-user-not-found-after-delete.png
+![user-deleted-204-response.png](./user-deleted-204-response.png)
 
 After deletion, the user could no longer be found in Auth0.
 
