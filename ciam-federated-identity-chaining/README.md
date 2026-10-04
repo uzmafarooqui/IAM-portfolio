@@ -1,71 +1,179 @@
-### HR‑driven identity onboarding (source → IGA)
-This use case demonstrates how employee data from an HR system flows into an Identity Governance platform, forming the foundation of the joiner–mover–leaver lifecycle.
+# Federated Identity Chaining (LinkedIn → Auth0)
 
-### Concept
-Provisioning automatically creates and updates user accounts based on HR changes.  
-Inbound mappings pull attributes from the HR source into midPoint.  
-Correlation ensures each HR record links to the correct identity instead of creating duplicates.
+This lab demonstrates how federated identity works when a user signs into an application using LinkedIn through Auth0.
 
-These steps ensure identities are consistently created, updated, and governed across systems.
+<br>
 
-### Screenshots 
-![Users Page](Users%20Page.png)
-**Users page:** Shows the six identities successfully imported from the HR CSV into midPoint. 
-![Audit Log](Audit%20log.png)
-**Audit log:** Shows today’s reconciliation events confirming the HR data was read, correlated, and linked to midPoint users.
+### What I Did
 
-## Directory provisioning (IGA → LDAP)
+- Created a LinkedIn Developer Application
+- Enabled Sign In with LinkedIn using OpenID Connect (OIDC)
+- Added LinkedIn as a social connection in Auth0
+- Enabled the connection for my application
+- Authenticated using LinkedIn through OIDC Debugger
+- Decoded and analyzed the returned ID token
 
-This section extends the pipeline beyond HR ingestion, showing how midPoint provisions accounts into OpenLDAP using outbound mappings and DN construction.
+<br>
 
-### What it is
-HR‑driven provisioning from source → IGA → directory.  
-midPoint reads HR data, correlates identities, and provisions accounts into OpenLDAP under `ou=people`.
+### Federated Identity Flow
 
-### The concept
-Outbound mappings convert midPoint identity attributes into LDAP attributes.  
-A Groovy script constructs the DN dynamically based on activation state.  
-Assigning the Employee role triggers automatic LDAP account creation.
+A user authenticates with LinkedIn, LinkedIn sends identity information to Auth0, and Auth0 issues a new token to the application.
+
+```text
+Application → Auth0 → LinkedIn
+```
+
+The application never communicates directly with LinkedIn and only trusts Auth0.
+
+<br>
 
 ### Screenshots
 
-![LDAP Accounts](ldap-accounts.png)  
-**phpLDAPadmin:** Shows the six LDAP accounts provisioned by midPoint under `ou=people`.
+![LinkedIn Login Through Auth0](linkedin-login-button.png)
 
-![Linked Projections](midpoint-linked-projections.png)  
-**midPoint projections:** Shows each identity linked to its LDAP account, confirming successful provisioning.
-### Artifacts
+**LinkedIn login:** User selects the LinkedIn social connection exposed by Auth0 Universal Login.
 
-![Outbound Mappings](outbound-mappings.png)  
-**Outbound mappings:** Shows how midPoint transforms identity attributes into LDAP attributes.
+<br>
 
-### Joiner–Leaver Lifecycle
+![Decoded LinkedIn Token](linkedin-jwt-token.png)
 
-This section demonstrates the full identity lifecycle in midPoint, from HR ingestion to LDAP provisioning and termination routing.
+**Decoded token:** Shows the ID token issued by Auth0 after successful authentication through LinkedIn.
 
-#### Joiner
-midPoint ingests the HR record, correlates the identity, assigns the Employee role, and provisions an LDAP account under `ou=people`.  
-**Result:** 7 accounts visible in phpLDAPadmin.
+<br>
 
-![LDAP Accounts – Joiner](ldap-accounts-7.png)
+### Token Analysis
 
-#### Leaver
-On termination, midPoint disables the identity and routes the LDAP account to `ou=inactive` instead of deleting it.  
-This preserves the **audit trail**, **role history**, and **lifecycle events** while removing access.  
-**Result:** 6 active accounts under `ou=people`.
+The decoded token contained:
 
-![LDAP Accounts – Leaver](ldap-accounts-6.png)
+```json
+{
+  "sub": "linkedin|IRtQ4LM_5M"
+}
+```
 
-#### Why routing instead of deletion?
-Deleting an identity erases compliance‑critical data. Routing preserves:
+The `sub` claim identifies:
 
-- identity history  
-- role assignments  
-- activation changes  
-- provisioning events  
-- audit logs  
+- The upstream identity provider (`linkedin`)
+- The user's unique identifier within LinkedIn
 
-This mirrors real enterprise IAM behavior.
+<br>
 
-Centrepiece of the portfolio: a working end‑to‑end lifecycle from **Joiner → Mover → Leaver**.
+The token issuer was:
 
+```json
+{
+  "iss": "https://dev-q531a5rk2ye1qpm7.us.auth0.com/"
+}
+```
+
+This demonstrates that Auth0 issued the token presented to the application.
+
+Although LinkedIn performed the authentication, the application only trusts Auth0 because Auth0 is the token issuer.
+
+<br>
+
+### Chain of Trust
+
+Federated identity creates a chain of trust between systems.
+
+```text
+Application trusts Auth0
+Auth0 trusts LinkedIn
+LinkedIn authenticates the user
+```
+
+The application never validates a LinkedIn token directly and only accepts tokens issued by Auth0.
+
+<br>
+
+### Why the Subject Identifier Matters
+
+The `sub` claim is the most reliable user identifier in OpenID Connect.
+
+Unlike email addresses, subject identifiers are intended to remain stable over time and uniquely identify a user within an identity provider.
+
+```json
+{
+  "sub": "linkedin|IRtQ4LM_5M"
+}
+```
+
+This value remains the authoritative identity reference for the authenticated user.
+
+<br>
+
+### Account Linking Challenge
+
+A single user may authenticate using multiple identity providers.
+
+For example:
+
+```text
+linkedin|IRtQ4LM_5M
+```
+
+and
+
+```text
+auth0|6ab1ced6dc504c4bc009d280
+```
+
+may represent the same person while appearing as separate identities in Auth0.
+
+<br>
+
+Without account linking, Auth0 treats these as different user accounts.
+
+This is a common Customer Identity and Access Management (CIAM) challenge because each identity provider generates its own unique subject identifier.
+
+<br>
+
+### Why Account Linking Matters
+
+Account linking helps organizations:
+
+- Maintain a single user profile
+- Prevent duplicate identities
+- Preserve user history and preferences
+- Provide a consistent authentication experience
+- Simplify identity governance
+
+<br>
+
+### Key Takeaways
+
+- Federated identity uses a chain of trust.
+- Applications trust Auth0.
+- Auth0 trusts LinkedIn.
+- LinkedIn authenticates the user.
+- The application only sees tokens issued by Auth0.
+- Subject identifiers are more reliable than email addresses.
+- Multiple providers may create multiple identities for the same user.
+- Account linking requires deliberate design and configuration.
+
+<br>
+
+### Technologies Used
+
+- LinkedIn Developer Platform
+- OpenID Connect (OIDC)
+- Auth0
+- JWT
+- OIDC Debugger
+
+<br>
+
+### Learning Outcome
+
+This lab provided hands-on experience with:
+
+- Federated authentication
+- Identity brokering
+- OpenID Connect
+- JWT analysis
+- Social identity providers
+- CIAM concepts
+- Account linking challenges
+- Trust relationships between identity systems
+
+<br>
