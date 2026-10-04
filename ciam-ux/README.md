@@ -20,5 +20,5 @@ These claims tell the application what information to ask the user for next. Ins
 
 ## Screenshots
 
-- login-count-1.png
-- login-count-2.png
+![login-count-1.png](./login-count-1.png)
+![login-count-2.png](./login-count-2.png)
