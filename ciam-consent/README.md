@@ -36,7 +36,7 @@ This allows each consent option to be managed independently.
 
 <br>
 
-auth0-app-metadata-consent.png
+![auth0-app-metadata-consent](auth0-app-metadata-consent.png)
 
 **App metadata:** Shows the user's consent preferences stored in Auth0.
 
