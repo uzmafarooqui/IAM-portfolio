@@ -10,13 +10,13 @@ This lab demonstrates how federated identity works when a user signs into an app
 
 ### LinkedIn Login Through Auth0
 
-./linkedin-login-button.png
+![linkedin-login-button](./linkedin-login-button.png)
 
 <br>
 
 ### Decoded LinkedIn Token
 
-./linkedin-jwt-token.png
+![linkedin-jwt-token](./linkedin-jwt-token.png)
 
 <br>
 
