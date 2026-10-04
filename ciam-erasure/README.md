@@ -11,6 +11,7 @@ I created a test user, deleted the account using the Management API, and verifie
 The test user existed in Auth0 with a unique user ID.
 
 ## Deletion Response
+![204-No-Content.png](./204-No-Content.png)
 
 The DELETE request returned:
 
