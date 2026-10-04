@@ -54,7 +54,7 @@ This allows each consent option to be managed independently.
 
 <br>
 
-consent-withdrawal-token.png
+![Consent Withdrawal](consent-withdrawal-token.png)
 
 **Consent withdrawal:** Shows a newly issued token after consent preferences were updated.
 
@@ -133,8 +133,6 @@ For example, a user can withdraw analytics consent while still keeping access to
 <br>
 
 This lab helped me understand:
-
-<br>
 
 - How Auth0 Post Login Actions work
 - How consent preferences can be stored in `app_metadata`
