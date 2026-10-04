@@ -52,6 +52,6 @@ Even though I logged in with LinkedIn, the application only trusts Auth0 and nev
 - Federated identity works through a chain of trust.
 - Applications trust Auth0.
 - Auth0 trusts LinkedIn.
-- Email is not the primary identifier.
+- The application only sees tokens issued by Auth0.
 - The subject identifier (`sub`) is the reliable identity key.
 - Account linking may be required when the same person uses multiple login methods.
