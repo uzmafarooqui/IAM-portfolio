@@ -12,8 +12,6 @@ The test user existed in Auth0 with a unique user ID.
 
 ## Deletion Response
 
-delete-response-204.png
-
 The DELETE request returned:
 
 ```text
