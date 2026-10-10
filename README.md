@@ -32,8 +32,52 @@ The goal of this portfolio is to demonstrate practical IAM implementation experi
 ---
 
 # Core IAM Projects
+| Project | Description |
+|----------|----------|
+| architecture-environment | IAM architecture, identity flow, and platform deployment |
+| joiner-workflow | Automated joiner provisioning using correlation and reconciliation |
+| mover-leaver | Lifecycle-driven access changes and deprovisioning |
+| auth0-federation | OIDC, OAuth 2.0, JWT, SAML, and federation |
+| rbac-roles | Role-Based Access Control (RBAC) |
+| access-certification | Access reviews and governance |
+| ciam-ux | Progressive profiling |
+| ciam-security | MFA and step-up authentication |
+| federated-identity-chaining | Social login and federation |
+| ciam-account-linking | Account linking and identity correlation |
+| ciam-consent | Consent management and GDPR Article 7 |
+| ciam-erasure | GDPR Right to Erasure |
 
-## Saturday 1 – Architecture and Environment
+---
+
+## Why These Projects Matter
+
+Identity and Access Management is about ensuring the right users have the right access at the right time.
+
+These projects demonstrate practical implementation experience across identity governance, provisioning, authentication, federation, customer identity, lifecycle management, and privacy-focused workflows.
+
+The goal is not only to describe IAM concepts, but to demonstrate working implementations and real-world IAM use cases.
+
+---
+
+## Evidence Included Throughout This Repository
+
+Each project folder contains implementation evidence including:
+
+- Screenshots
+- Configuration examples
+- OpenLDAP account records
+- JWT analysis
+- SAML assertions
+- Access review evidence
+- Federation configurations
+- API results
+- Validation testing
+
+The objective is not only to describe IAM concepts but to demonstrate practical implementation experience through working implementations and documented outcomes.
+
+---
+
+## IAM Architecture and Environment
 
 ### What I Built
 
@@ -50,7 +94,7 @@ I deployed the core IAM lab environment and established connectivity between Sim
 
 ---
 
-## Saturday 2 – Joiner Workflow
+## Joiner Provisioning
 
 ### What I Built
 
@@ -66,7 +110,7 @@ I implemented automated joiner provisioning using correlation rules, inbound map
 
 ---
 
-## Saturday 3 – Mover and Leaver Workflows
+## Mover and Leaver Lifecycle Management
 
 ### What I Built
 
@@ -83,7 +127,7 @@ I configured role-based access changes and lifecycle workflows for employee tran
 
 ---
 
-## Saturday 4 – Access Management
+## OIDC and SAML Federation
 
 ### What I Built
 
@@ -102,7 +146,7 @@ I configured OIDC and SAML federation using Auth0 and analyzed authentication ar
 
 ---
 
-## Saturday 5 – Career Preparation
+## Portfolio Development and Career Preparation
 
 ### What I Built
 
