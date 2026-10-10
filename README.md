@@ -2,8 +2,8 @@
 
 **Name:** Uzma Farooqui  
 **Cohort:** SimplifyIAM Live Cohort 1  
-**LinkedIn:** https://www.linkedin.com/in/uzmafarooqui  
-**GitHub:** https://github.com/uzmafarooqui/IAM-portfolio  
+**LinkedIn:** [Uzma Farooqui](https://www.linkedin.com/in/uzmafarooqui)
+**GitHub:** [IAM Portfolio](https://github.com/uzmafarooqui/IAM-portfolio)
 **Completed:** May 2026
 
 ---
@@ -95,6 +95,11 @@ I deployed the core IAM lab environment and established connectivity between Sim
 ---
 
 ## Joiner Provisioning
+### Why This Matters
+
+HR is typically the source of truth because employee records originate there first.
+
+Automated provisioning reduces manual effort and ensures new employees receive the correct access quickly and consistently.
 
 ### What I Built
 
@@ -111,7 +116,11 @@ I implemented automated joiner provisioning using correlation rules, inbound map
 ---
 
 ## Mover and Leaver Lifecycle Management
+### Why This Matters
 
+Access should change when job responsibilities change.
+
+Accounts are disabled rather than immediately deleted to preserve audit history and support security investigations when required.
 ### What I Built
 
 I configured role-based access changes and lifecycle workflows for employee transfers and departures. HR status changes automatically updated access assignments and disabled accounts in OpenLDAP.
@@ -128,6 +137,9 @@ I configured role-based access changes and lifecycle workflows for employee tran
 ---
 
 ## OIDC and SAML Federation
+### Why This Matters
+
+OIDC and SAML are widely used enterprise federation protocols that provide secure authentication and single sign-on capabilities.
 
 ### What I Built
 
@@ -274,7 +286,18 @@ ciam-erasure/
 ---
 
 # Technologies Demonstrated
+# Enterprise Technology Mapping
 
+| Lab Technology | Enterprise Equivalent |
+|----------|----------|
+| midPoint | SailPoint IdentityNow / IdentityIQ |
+| OpenLDAP | Active Directory |
+| Auth0 | Microsoft Entra ID / Okta |
+| OIDC | Workforce and CIAM Authentication |
+| SAML | Enterprise Single Sign-On |
+| Access Certification | Access Reviews and Governance |
+| Account Linking | Customer Identity Correlation |
+| Consent Management | Privacy and Compliance Programs |
 - Auth0
 - midPoint
 - OpenLDAP
