@@ -285,7 +285,6 @@ ciam-erasure/
 
 ---
 
-# Technologies Demonstrated
 # Enterprise Technology Mapping
 
 | Lab Technology | Enterprise Equivalent |
