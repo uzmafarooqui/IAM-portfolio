@@ -297,6 +297,11 @@ ciam-erasure/
 | Access Certification | Access Reviews and Governance |
 | Account Linking | Customer Identity Correlation |
 | Consent Management | Privacy and Compliance Programs |
+
+---
+
+# Technologies Demonstrated
+
 - Auth0
 - midPoint
 - OpenLDAP
@@ -383,5 +388,4 @@ IAM-portfolio/
 # Contact
 
 I am actively pursuing Identity and Access Management opportunities and continuing to expand my expertise in identity governance, access management, CIAM, and federation technologies.
-
-**LinkedIn:** https://www.linkedin.com/in/uzmafarooqui
+**LinkedIn:** [Uzma Farooqui](https://www.linkedin.com/in/uzmafarooqui)
