@@ -34,25 +34,26 @@ The purpose of this portfolio is to demonstrate practical IAM implementation exp
 
 ## Foundations
 
-- [IAM Architecture and EnvironmentAM-portfolio/tree/main/architecture-environment
+- https://github.com/uzmafarooqui/IAM-portfolio/tree/main/architecture-environment
 
 ## Identity Governance (IGA)
 
-- [HR-Driven Identity Onboardingi/IAM-portfolio/tree/main/joiner-leaver
-- [Role-Based Access Control (RBAC)](https://github.comin/rbac-roles
-- [Access Certificationmafarooqui/IAM-portfolio/tree/main/access-certification
+- https://github.com/uzmafarooqui/IAM-portfolio/tree/main/joiner-leaver
+- [Role-Based Access Control (RBAC)](https:olio/tree/main/rbac-roles
+- [Access Certification and Governance](httpsio/tree/main/access-certification
 
 ## Access Management and Federation
 
-- [OIDC and SAML Federation](https://github.com/uzmafarooqui/IAM-portfolio- [MFA and Step-Up Authentication](https://github.com/ain/ciam-security
+- [OIDC and SAML Federation](httpsIAM-portfolio/tree/main/ciam-federation
+- [MFA and Step-Up Authentication]IAM-portfolio/tree/main/ciam-security
 
 ## Customer Identity and Access Management (CIAM)
 
-- [Progressive Profiling](https://githubrtfolio/tree/main/ciam-ux
-- [Federated Identity Chaining](https://github.com/uzmain/ciam-federated-identity-chaining
-- [Account Linking](https://githubIAM-portfolio/tree/main/ciam-account-linking
-- [Consent Management (GDPR Article 7)](https://github.comciam-consent
-- [ttps://github.com/uzmafarooqui/IAM-portfolio/tree/main/ciam-erasure
+- [ttps://github.com/uzmafarooqui/IAM-portfolio/tree/main/ciam-ux
+- [Federated Identity Chaining](https:portfolio/tree/main/ciam-federated-identity-chaining
+- [Account Linking](https://github.com/uzmafarooqui//main/ciam-account-linking
+- [Consent Management (GDPR Article 7)](https://githubain/ciam-consent
+- [GDPR Right to Erasure](https://github.com/uzmafarooain/ciam-erasure
 
 ## Outcome
 
