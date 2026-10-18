@@ -1,302 +1,293 @@
 # IAM Implementation Portfolio
 
-**Name:** Uzma Farooqui  
-**Cohort:** SimplifyIAM Live Cohort 1  
+## Uzma Farooqui
+
+**SimplifyIAM Live Cohort 1**
+
 **LinkedIn:** [Uzma Farooqui](https://www.linkedin.com/in/uzmafarooqui)
 **GitHub:** [IAM Portfolio](https://github.com/uzmafarooqui/IAM-portfolio)
-**Completed:** May 2026
 
 ---
 
-# About This Portfolio
+# Portfolio Overview
 
-This portfolio documents my hands-on Identity and Access Management (IAM) implementations completed throughout the SimplifyIAM Live Cohort.
+This repository showcases hands-on Identity and Access Management (IAM) implementations completed during the SimplifyIAM Live Cohort.
 
-Using midPoint, OpenLDAP, and Auth0, I built an end-to-end IAM environment that simulates real-world identity governance, provisioning, authentication, federation, customer identity (CIAM), and lifecycle management processes.
+Using SimplifyHR, midPoint, OpenLDAP, and Auth0, I designed, configured, tested, and documented a complete IAM environment covering identity governance, provisioning, lifecycle management, federation, authentication, customer identity (CIAM), and privacy-focused workflows.
 
-Throughout the program, I configured identity synchronization, automated provisioning workflows, implemented access management solutions, and explored modern CIAM concepts including MFA, account linking, consent management, progressive profiling, and GDPR right-to-erasure.
-
-The goal of this portfolio is to demonstrate practical IAM implementation experience through real configurations, screenshots, workflows, and documented lessons learned.
+The purpose of this portfolio is to demonstrate practical IAM implementation experience through working configurations, screenshots, technical artifacts, validation testing, and documented outcomes.
 
 ---
 
-# Environment
+# IAM Lab Environment
 
 | Component | Purpose |
 |------------|------------|
-| midPoint | Identity Governance and Administration (IGA) |
-| SimplifyHR (Flask) | HR Source of Truth |
+| SimplifyHR | HR Source of Truth |
+| midPoint | Identity Governance & Administration (IGA) |
 | OpenLDAP | Target Directory |
-| Auth0 | Access Management, Federation, MFA, and CIAM |
+| Auth0 | Authentication, Federation, MFA, and CIAM |
 
 ---
 
-# Core IAM Projects
-| Project | Description |
-|----------|----------|
-| architecture-environment | IAM architecture, identity flow, and platform deployment |
-| joiner-workflow | Automated joiner provisioning using correlation and reconciliation |
-| mover-leaver | Lifecycle-driven access changes and deprovisioning |
-| auth0-federation | OIDC, OAuth 2.0, JWT, SAML, and federation |
-| rbac-roles | Role-Based Access Control (RBAC) |
-| access-certification | Access reviews and governance |
-| ciam-ux | Progressive profiling |
-| ciam-security | MFA and step-up authentication |
-| federated-identity-chaining | Social login and federation |
-| ciam-account-linking | Account linking and identity correlation |
-| ciam-consent | Consent management and GDPR Article 7 |
-| ciam-erasure | GDPR Right to Erasure |
+# Capabilities Built
+
+## Foundations
+
+- IAM Architecture and Environment
+
+## Identity Governance (IGA)
+
+- HR-Driven Identity Onboarding (Joiner)
+- Provisioning to a Target Directory
+- Mover Lifecycle Management
+- Leaver Lifecycle Management
+- Role-Based Access Control (RBAC)
+- Access Certification and Governance
+
+## Access Management and Federation
+
+- OIDC Single Sign-On
+- OAuth 2.0 and JWT Validation
+- SAML Federation
+- Multi-Factor Authentication (MFA)
+
+## Customer Identity and Access Management (CIAM)
+
+- Progressive Profiling
+- Federated Identity Chaining
+- Account Linking
+- Consent Management
+- GDPR Right to Erasure
+
+## Outcome
+
+- Technical Portfolio Development
+- IAM Interview Readiness
+- Career Preparation
 
 ---
 
-## Why These Projects Matter
+# Portfolio Index
 
-Identity and Access Management is about ensuring the right users have the right access at the right time.
-
-These projects demonstrate practical implementation experience across identity governance, provisioning, authentication, federation, customer identity, lifecycle management, and privacy-focused workflows.
-
-The goal is not only to describe IAM concepts, but to demonstrate working implementations and real-world IAM use cases.
+| Capability | Folder |
+|------------|---------|
+| IAM Architecture and Environment | architecture-environment |
+| HR-Driven Identity Onboarding (Joiner) | joiner-workflow |
+| Mover and Leaver Lifecycle Management | mover-leaver |
+| OIDC and SAML Federation | auth0-federation |
+| Role-Based Access Control (RBAC) | rbac-roles |
+| Access Certification and Governance | access-certification |
+| Progressive Profiling | ciam-ux |
+| MFA and Step-Up Authentication | ciam-security |
+| Federated Identity Chaining | federated-identity-chaining |
+| Account Linking | ciam-account-linking |
+| Consent Management (GDPR Article 7) | ciam-consent |
+| GDPR Right to Erasure | ciam-erasure |
 
 ---
 
-## Evidence Included Throughout This Repository
+# What You'll Find in This Repository
 
-Each project folder contains implementation evidence including:
+Each project folder contains technical evidence, including:
 
 - Screenshots
-- Configuration examples
-- OpenLDAP account records
+- Configuration files
+- midPoint mappings
+- Auth0 Actions
+- OpenLDAP records
 - JWT analysis
 - SAML assertions
-- Access review evidence
-- Federation configurations
-- API results
+- API requests and responses
 - Validation testing
+- Lessons learned
+- Enterprise technology mappings
 
-The objective is not only to describe IAM concepts but to demonstrate practical implementation experience through working implementations and documented outcomes.
+The goal is not only to explain IAM concepts but also to demonstrate working implementations and practical IAM skills.
 
 ---
 
-## IAM Architecture and Environment
+# IAM Architecture and Environment
 
-### What I Built
+## Capability
 
-I deployed the core IAM lab environment and established connectivity between SimplifyHR, midPoint, and OpenLDAP. I validated identity data flow from the HR source into the identity platform and target directory.
+Design and deploy a complete IAM environment.
 
-### Skills Demonstrated
+## What I Built
+
+I deployed and integrated SimplifyHR, midPoint, OpenLDAP, and Auth0 into a working IAM lab environment.
+
+The solution established trusted identity flows from the HR source through governance and provisioning systems into the target directory.
+
+## Why It Matters
+
+IAM platforms rely on authoritative identity data flowing securely across systems while maintaining governance and accountability.
+
+## Evidence
+
+- Architecture diagrams
+- Connectivity validation
+- Identity flow screenshots
+- Environment deployment documentation
+
+## Skills Demonstrated
 
 - IAM Architecture
+- Identity Governance
 - Directory Services
 - OpenLDAP Administration
-- midPoint Configuration
-- Identity Data Flow
-- Identity Lifecycle Foundations
+- midPoint Administration
 
 ---
 
-## Joiner Provisioning
-### Why This Matters
+# HR-Driven Identity Onboarding (Joiner)
 
-HR is typically the source of truth because employee records originate there first.
+## Capability
 
-Automated provisioning reduces manual effort and ensures new employees receive the correct access quickly and consistently.
+Provision new user accounts automatically from HR onboarding events.
 
-### What I Built
+## What I Built
 
-I implemented automated joiner provisioning using correlation rules, inbound mappings, and reconciliation processes within midPoint. New hires created in SimplifyHR were automatically provisioned into OpenLDAP.
+I configured correlation, reconciliation, inbound mappings, and provisioning workflows in midPoint.
 
-### Skills Demonstrated
+When a new employee was created in SimplifyHR, the account was automatically provisioned into OpenLDAP.
+
+## Why It Matters
+
+Automated onboarding improves consistency, reduces manual administration, and ensures users receive appropriate access quickly.
+
+## Evidence
+
+- User creation screenshots
+- Correlation rules
+- Reconciliation results
+- OpenLDAP account creation
+
+## Skills Demonstrated
 
 - Identity Provisioning
-- Correlation Rules
+- Correlation
 - Reconciliation
-- Joiner Processes
-- OpenLDAP Account Creation
+- Joiner Automation
+- Lifecycle Management
 
 ---
 
-## Mover and Leaver Lifecycle Management
-### Why This Matters
+# Mover and Leaver Lifecycle Management
 
-Access should change when job responsibilities change.
+## Capability
 
-Accounts are disabled rather than immediately deleted to preserve audit history and support security investigations when required.
-### What I Built
+Modify or revoke access as employee roles and employment status change.
 
-I configured role-based access changes and lifecycle workflows for employee transfers and departures. HR status changes automatically updated access assignments and disabled accounts in OpenLDAP.
+## What I Built
 
-### Skills Demonstrated
+I configured lifecycle-driven workflows that automatically updated user access during transfers and disabled accounts for departing employees.
 
-- Role-Based Access Control (RBAC)
+## Why It Matters
+
+Users should only retain access appropriate for their current role.
+
+Disabling accounts instead of deleting them preserves audit history and supports compliance requirements.
+
+## Evidence
+
+- Before-and-after screenshots
+- Role changes
+- Access updates
+- Account disablement validation
+
+## Skills Demonstrated
+
 - Identity Lifecycle Management
+- RBAC
+- Access Revocation
 - Mover Automation
 - Leaver Automation
-- Access Revocation
-- User Deprovisioning
 
 ---
 
-## OIDC and SAML Federation
-### Why This Matters
+# Access Management and Federation
 
-OIDC and SAML are widely used enterprise federation protocols that provide secure authentication and single sign-on capabilities.
+## Capability
 
-### What I Built
+Provide secure authentication and federation using industry-standard protocols.
 
-I configured OIDC and SAML federation using Auth0 and analyzed authentication artifacts including JWTs and SAML assertions. I also implemented MFA, account linking, consent management, progressive profiling, and GDPR privacy workflows.
+## What I Built
 
-### Skills Demonstrated
+I configured Auth0-based federation solutions and validated authentication using:
 
-- OpenID Connect (OIDC)
+- OIDC
 - OAuth 2.0
-- SAML 2.0
+- JWTs
+- SAML Assertions
+- MFA
+
+I also implemented CIAM-focused use cases including consent management, account linking, progressive profiling, and privacy workflows.
+
+## Why It Matters
+
+Federation centralizes authentication, improves security, and simplifies the user experience across applications.
+
+## Evidence
+
+- JWT screenshots
+- SAML assertions
+- MFA screenshots
+- Federation configuration
+- Authentication testing
+
+## Skills Demonstrated
+
+- OIDC
+- OAuth 2.0
 - JWT Analysis
-- Multi-Factor Authentication (MFA)
+- SAML
 - Federation
-- CIAM Implementation
+- MFA
 - Auth0 Administration
 
 ---
 
-## Portfolio Development and Career Preparation
+# Customer Identity and Access Management (CIAM)
 
-### What I Built
+## Progressive Profiling
 
-I consolidated all IAM implementations into a professional technical portfolio and translated the work into interview-ready projects and resume-ready accomplishments.
+Implemented progressive profiling using Auth0 Actions and custom claims to collect user information over time.
 
-### Skills Demonstrated
+## MFA and Step-Up Authentication
 
-- Technical Documentation
-- Portfolio Development
-- Career Branding
-- Resume Optimization
-- Interview Preparation
-
----
-
-# CIAM Projects
-
-## CIAM UX – Progressive Profiling
-
-### Overview
-
-Implemented progressive profiling using Auth0 Actions and custom token claims.
-
-### Skills Demonstrated
-
-- Progressive Profiling
-- Custom JWT Claims
-- User Experience Optimization
-- Auth0 Actions
-
-### Folder
-
-```text
-ciam-ux/
-```
-
----
-
-## CIAM Security – MFA and Step-Up Authentication
-
-### Overview
-
-Configured MFA using TOTP and analyzed AMR claims to understand authentication strength and step-up authentication patterns.
-
-### Skills Demonstrated
-
-- Multi-Factor Authentication
-- TOTP
-- Step-Up Authentication
-- AMR Claims
-- Token Analysis
-
-### Folder
-
-```text
-ciam-security/
-```
-
----
+Configured MFA using TOTP and analyzed authentication assurance through AMR claims.
 
 ## Federated Identity Chaining
 
-### Overview
+Integrated Google and LinkedIn federation through Auth0 and analyzed trust relationships between identity providers.
 
-Configured LinkedIn federation through Auth0 and analyzed trust relationships across identity providers.
+## Account Linking
 
-### Skills Demonstrated
+Linked multiple user identities into a unified customer profile using the Auth0 Management API and Postman.
 
-- Federation
-- OIDC
-- Identity Chaining
-- Social Login
-- JWT Analysis
+## Consent Management
 
-### Folder
+Implemented granular consent collection, withdrawal workflows, and GDPR Article 7 compliance requirements.
 
-```text
-federated-identity-chaining/
-```
+## GDPR Right to Erasure
 
----
-
-## CIAM Account Linking
-
-### Overview
-
-Created separate database and Google identities using the same email address and linked them using the Auth0 Management API and Postman.
-
-### Skills Demonstrated
-
-- Identity Correlation
-- Account Linking
-- REST APIs
-- Auth0 Management API
-- CIAM Security
-
-### Folder
-
-```text
-ciam-account-linking/
-```
-
----
-
-## CIAM Right to Erasure
-
-### Overview
-
-Simulated GDPR right-to-erasure workflows using the Auth0 Management API and documented downstream data deletion requirements.
-
-### Skills Demonstrated
-
-- GDPR Compliance
-- Data Privacy
-- User Deletion Workflows
-- REST APIs
-- Data Retention Analysis
-
-### Folder
-
-```text
-ciam-erasure/
-```
+Simulated privacy-focused account deletion processes and documented downstream data removal requirements.
 
 ---
 
 # Enterprise Technology Mapping
 
 | Lab Technology | Enterprise Equivalent |
-|----------|----------|
+|----------------|----------------------|
 | midPoint | SailPoint IdentityNow / IdentityIQ |
 | OpenLDAP | Active Directory |
 | Auth0 | Microsoft Entra ID / Okta |
-| OIDC | Workforce and CIAM Authentication |
+| Access Certification | Access Reviews |
+| OIDC | Workforce & CIAM Authentication |
 | SAML | Enterprise Single Sign-On |
-| Access Certification | Access Reviews and Governance |
+| Consent Management | Privacy & Compliance Programs |
 | Account Linking | Customer Identity Correlation |
-| Consent Management | Privacy and Compliance Programs |
 
 ---
 
@@ -320,9 +311,9 @@ ciam-erasure/
 - Federation
 - CIAM
 - Identity Lifecycle Management
-- Joiner / Mover / Leaver Processes
-- Account Linking
+- Access Certification
 - Consent Management
+- Account Linking
 - Progressive Profiling
 - GDPR Right to Erasure
 
@@ -332,21 +323,17 @@ ciam-erasure/
 
 - Implemented automated identity provisioning workflows using midPoint, including correlation, reconciliation, and OpenLDAP account creation.
 - Built joiner, mover, and leaver processes that automated lifecycle-driven access changes and account deprovisioning.
-- Configured Auth0-based access management solutions including OIDC, SAML federation, MFA, and JWT analysis.
-- Implemented customer identity workflows including consent management, progressive profiling, account linking, and GDPR right-to-erasure.
-- Developed and documented a complete IAM environment integrating identity governance, provisioning, authentication, and CIAM capabilities.
+- Configured Auth0-based federation using OIDC, OAuth 2.0, SAML, MFA, and JWT analysis.
+- Implemented CIAM solutions including consent management, account linking, progressive profiling, and GDPR privacy workflows.
+- Developed and documented a complete IAM environment integrating identity governance, provisioning, authentication, federation, and customer identity services.
 
 ---
 
-# My Transformation
+# Career Outcome
 
-## Where I Started
+Before joining the SimplifyIAM cohort, my experience focused primarily on supporting IAM operations including Active Directory, Microsoft Entra ID, access governance, authentication, and identity lifecycle management.
 
-Before this cohort, I had experience supporting IAM operations including Active Directory, Microsoft Entra ID, access governance, identity lifecycle management, and authentication processes. However, I had limited hands-on experience building IAM platforms and configuring modern federation technologies.
-
-## Where I Am Now
-
-I have designed, configured, and tested a complete IAM environment using midPoint, OpenLDAP, and Auth0. I can demonstrate identity provisioning, reconciliation, lifecycle management, federation, MFA, account linking, consent management, progressive profiling, JWT analysis, and GDPR erasure workflows using working implementations.
+Through this portfolio, I designed, configured, tested, and documented a complete IAM environment covering governance, provisioning, federation, authentication, privacy, and CIAM capabilities.
 
 ---
 
@@ -354,38 +341,20 @@ I have designed, configured, and tested a complete IAM environment using midPoin
 
 - IAM Engineer
 - Associate IAM Engineer
-- Identity Engineer
 - IAM Analyst
-- CIAM Engineer
-- Entra ID Engineer
-- Access Management Engineer
 - IAM Administrator
+- Identity Engineer
 - Identity Governance Analyst
-
----
-
-# Repository Structure
-
-```text
-IAM-portfolio/
-│
-├── architecture-environment/
-├── joiner-workflow/
-├── mover-leaver/
-├── auth0-federation/
-├── rbac-roles/
-├── access-certification/
-├── ciam-ux/
-├── ciam-security/
-├── federated-identity-chaining/
-├── ciam-account-linking/
-├── ciam-erasure/
-└── README.md
-```
+- Access Management Engineer
+- Entra ID Engineer
+- CIAM Engineer
 
 ---
 
 # Contact
 
-I am actively pursuing Identity and Access Management opportunities and continuing to expand my expertise in identity governance, access management, CIAM, and federation technologies.
-**LinkedIn:** [Uzma Farooqui](https://www.linkedin.com/in/uzmafarooqui)
+I am actively pursuing Identity and Access Management opportunities and continuing to expand my expertise in identity governance, federation, access management, CIAM, and Microsoft Entra ID.
+
+**LinkedIn:** https://www.linkedin.com/in/uzmafarooqui
+
+**GitHub:** https://github.com/uzmafarooqui/IAM-portfolio
