@@ -70,20 +70,24 @@ The purpose of this portfolio is to demonstrate practical IAM implementation exp
 
 # Portfolio Index
 
-| Capability | Folder |
-|------------|---------|
-| IAM Architecture and Environment | ./architecture-environment |
-| HR-Driven Identity Onboarding (Joiner) | ./joiner-leaver |
-| Role-Based Access Control (RBAC) | ./rbac-roles |
-| Access Certification and Governance | ./access-certification |
-| OIDC and SAML Federation | ./ciam-federation |
-| Progressive Profiling | ./ciam-ux |
-| MFA and Step-Up Authentication | ./ciam-security |
-| Federated Identity Chaining | ./ciam-federated-identity-chaining |
-| Account Linking | ./ciam-account-linking |
-| Consent Management (GDPR Article 7) | ./ciam-consent |
-| GDPR Right to Erasure | ./ciam-erasure |
+## Foundations
+- ./architecture-environment
 
+## Identity Governance (IGA)
+- ./joiner-leaver
+- ./rbac-roles
+- ./access-certification
+
+## Access Management and Federation
+- ./ciam-federation
+- ./ciam-security
+
+## Customer Identity and Access Management (CIAM)
+- ./ciam-ux
+- ./ciam-federated-identity-chaining
+- ./ciam-account-linking
+- ./ciam-consent
+- ./ciam-erasure
 ---
 
 # What You'll Find in This Repository
