@@ -34,26 +34,26 @@ The purpose of this portfolio is to demonstrate practical IAM implementation exp
 
 ## Foundations
 
-- https://github.com/uzmafarooqui/IAM-portfolio/tree/main/architecture-environment
+- [IAM Architecture and Environment](https://github.com/uzmafarooqui/IAM-portfolio)
 
 ## Identity Governance (IGA)
 
-- https://github.com/uzmafarooqui/IAM-portfolio/tree/main/joiner-leaver
-- [Role-Based Access Control (RBAC)](https:olio/tree/main/rbac-roles
-- [Access Certification and Governance](httpsio/tree/main/access-certification
+- [HR-Driven Identity Onboarding (Joiner)](https://github.com/uzmafarooqui/IAM-portfolio/blob/main/joiner-leaver/README.md)
+- [Role-Based Access Control (RBAC)](https://github.com/uzmafarooqui/IAM-portfolio/blob/main/rbac-roles/README.md)
+- [Access Certification and Governance](https://github.com/uzmafarooqui/IAM-portfolio/blob/main/access-certification/README.md)
 
 ## Access Management and Federation
 
-- [OIDC and SAML Federation](httpsIAM-portfolio/tree/main/ciam-federation
-- [MFA and Step-Up Authentication]IAM-portfolio/tree/main/ciam-security
+- [OIDC and SAML Federation](https://github.com/uzmafarooqui/IAM-portfolio/blob/main/ciam-federation/README.md)
+- [MFA and Step-Up Authentication](https://github.com/uzmafarooqui/IAM-portfolio/blob/main/ciam-security/README.md)
 
 ## Customer Identity and Access Management (CIAM)
 
-- [ttps://github.com/uzmafarooqui/IAM-portfolio/tree/main/ciam-ux
-- [Federated Identity Chaining](https:portfolio/tree/main/ciam-federated-identity-chaining
-- [Account Linking](https://github.com/uzmafarooqui//main/ciam-account-linking
-- [Consent Management (GDPR Article 7)](https://githubain/ciam-consent
-- [GDPR Right to Erasure](https://github.com/uzmafarooain/ciam-erasure
+- [Progressive Profiling](https://github.com/uzmafarooqui/IAM-portfolio/blob/main/ciam-ux/README.md)
+- [Federated Identity Chaining](https://github.com/uzmafarooqui/IAM-portfolio/blob/main/ciam-federated-identity-chaining/README.md)
+- [Account Linking](https://github.com/uzmafarooqui/IAM-portfolio/blob/main/ciam-account-linking/README.md)
+- [Consent Management (GDPR Article 7)](https://github.com/uzmafarooqui/IAM-portfolio/blob/main/ciam-consent/README.md)
+- [GDPR Right to Erasure](https://github.com/uzmafarooqui/IAM-portfolio/blob/main/ciam-erasure/README.md)
 
 ## Outcome
 
